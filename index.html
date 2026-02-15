@@ -25,6 +25,29 @@
 <div id="game" style="display:none;">
     <p id="welcome"></p>
     <div id="gameArea"></div>
+
+    <!-- Controles de movimiento -->
+    <div id="controls">
+        <button onclick="movePlayerButton('up')">⬆️</button><br>
+        <button onclick="movePlayerButton('left')">⬅️</button>
+        <button onclick="movePlayerButton('down')">⬇️</button>
+        <button onclick="movePlayerButton('right')">➡️</button>
+    </div>
+
+    <!-- Botones de acción -->
+    <div id="actions">
+        <button onclick="earnMoney()">Vender café</button>
+        <button onclick="upgradeBusiness()">Mejorar negocio ($100)</button>
+    </div>
+
+    <!-- Información del jugador -->
+    <p id="money"></p>
+    <p id="level"></p>
+    <p id="income"></p>
+
+    <!-- Ranking -->
+    <h2>Ranking</h2>
+    <ul id="ranking"></ul>
 </div>
 
 <!-- Firebase -->
@@ -33,3 +56,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
