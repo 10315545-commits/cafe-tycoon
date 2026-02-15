@@ -1,44 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tycoon Multijugador</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tycoon Multijugador</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Tycoon Multijugador</h1>
+<h1>Tycoon Multijugador</h1>
 
-    <!-- Pantalla de login y selección de avatar -->
-    <div id="login">
-        <input type="text" id="playerName" placeholder="Nombre del personaje">
-        <p>Elige tu avatar:</p>
-        <div id="avatars">
-            <img class="avatarOption" src="images/avatar1.png" alt="Avatar 1" onclick="selectAvatar('avatar1.png')">
-            <img class="avatarOption" src="images/avatar2.png" alt="Avatar 2" onclick="selectAvatar('avatar2.png')">
-            <img class="avatarOption" src="images/avatar3.png" alt="Avatar 3" onclick="selectAvatar('avatar3.png')">
-        </div>
-        <button onclick="login()">Entrar al juego</button>
+<!-- Login y selección de avatar -->
+<div id="login">
+    <input type="text" id="playerName" placeholder="Nombre del personaje">
+    <p>Elige tu avatar:</p>
+    <div id="avatars">
+        <img class="avatarOption" src="images/avatar1.png" onclick="selectAvatar('avatar1.png')">
+        <img class="avatarOption" src="images/avatar2.png" onclick="selectAvatar('avatar2.png')">
+        <img class="avatarOption" src="images/avatar3.png" onclick="selectAvatar('avatar3.png')">
     </div>
+    <button onclick="login()">Entrar al juego</button>
+</div>
 
-    <!-- Pantalla del juego -->
-    <div id="game" style="display:none;">
-        <p id="welcome"></p>
-        <img id="avatar" src="images/avatar1.png" alt="Avatar" width="100">
-        <p id="money"></p>
-        <p id="level"></p>
-        <p id="income"></p>
+<!-- Pantalla del juego -->
+<div id="game" style="display:none;">
+    <p id="welcome"></p>
+    <div id="gameArea"></div>
+</div>
 
-        <button onclick="earnMoney()">Vender café</button>
-        <button onclick="upgradeBusiness()">Mejorar negocio ($100)</button>
-
-        <h2>Ranking</h2>
-        <ul id="ranking"></ul>
-    </div>
-
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
-    <script src="script.js"></script>
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
